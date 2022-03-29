@@ -6,5 +6,6 @@ func main() {
 	//test2()
 	//arrDemo()
 	//sliceDemo1()
-	sliceDemo2()
+	//sliceDemo2()
+	sliceDemo3()
 }

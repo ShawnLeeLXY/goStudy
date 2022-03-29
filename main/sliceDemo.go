@@ -175,3 +175,10 @@ str: 0xc00004c250, s3: 0xc00001a220
 s3 = hello Go!
 str: 0xc00004c250, s3: 0xc00001a220
 */
+
+func sliceDemo3() {
+	arr := [3]int{100, 200, 300}
+	fmt.Printf("arr: %p, %v\n", &arr, arr)
+	slc := arr[:]
+	fmt.Printf("slc: %p, %v\n", &slc, slc)
+}
