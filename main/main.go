@@ -7,5 +7,8 @@ func main() {
 	//arrDemo()
 	//sliceDemo1()
 	//sliceDemo2()
-	sliceDemo3()
+	//sliceDemo3()
+	//test3()
+	//mapDemo()
+	test4()
 }
