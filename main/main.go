@@ -10,5 +10,7 @@ func main() {
 	//sliceDemo3()
 	//test3()
 	//mapDemo()
-	test4()
+	//test4()
+	//test5()
+	mapOutput()
 }
