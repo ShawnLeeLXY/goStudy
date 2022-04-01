@@ -12,5 +12,6 @@ func main() {
 	//mapDemo()
 	//test4()
 	//test5()
-	mapOutput()
+	//mapOutput()
+	statementDemo()
 }
