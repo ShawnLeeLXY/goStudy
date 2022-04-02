@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-func statementDemo() {
+func conditionDemo() {
 	var num int
 	for {
 		print("请输入一个整数：")
@@ -31,5 +34,28 @@ func statementDemo() {
 		fmt.Println("差！")
 	default:
 		fmt.Println("请输入正确的格式！")
+	}
+}
+
+func cycleDemo() {
+	for {
+		fmt.Println("Hello!")
+		time.Sleep(time.Second / 2)
+	}
+}
+
+// range演示
+func rangeDemo() {
+	str := "abc"
+	for i := range str {
+		fmt.Println(string(str[i]))
+	}
+	for _, c := range str {
+		fmt.Println(string(c))
+	}
+
+	m1 := map[int]string{1: "abc", 2: "def", 3: "ghi"}
+	for k, v := range m1 {
+		fmt.Println(k, v)
 	}
 }

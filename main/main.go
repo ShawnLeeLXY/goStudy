@@ -13,5 +13,10 @@ func main() {
 	//test4()
 	//test5()
 	//mapOutput()
-	statementDemo()
+	//conditionDemo()
+	//prime()
+	//cycleDemo()
+	//rangeDemo()
+	//funcDemo()
+	argsDemo()
 }
