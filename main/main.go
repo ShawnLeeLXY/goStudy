@@ -18,5 +18,7 @@ func main() {
 	//cycleDemo()
 	//rangeDemo()
 	//funcDemo()
-	argsDemo()
+	//argsDemo()
+	//retDemo1()
+	retDemo2()
 }

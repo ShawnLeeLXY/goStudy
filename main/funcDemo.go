@@ -36,3 +36,35 @@ func argsHandle(str string, nums ...int) string {
 func argsDemo() {
 	fmt.Println(argsHandle("sum: %d", 1, 2, 3))
 }
+
+func add(a, b int) (c int) {
+	c = a + b
+	return
+}
+
+func cal(a, b int) (sum int, avg int) {
+	sum = a + b
+	avg = (a + b) / 2
+
+	return
+}
+
+func retDemo1() {
+	var a, b = 1, 2
+	c := add(a, b)
+	sum, avg := cal(a, b)
+	fmt.Println(a, b, c, sum, avg)
+}
+
+func op(x, y int) (z int) {
+	defer func() {
+		println(z) // 输出: 203
+	}()
+
+	z = x + y
+	return z + 200 // 执行顺序: (z = z + 200) -> (call defer) -> (return)
+}
+
+func retDemo2() {
+	println("z =", op(1, 2)) // 输出: z = 203
+}
