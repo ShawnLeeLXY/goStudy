@@ -20,5 +20,9 @@ func main() {
 	//funcDemo()
 	//argsDemo()
 	//retDemo1()
-	retDemo2()
+	//retDemo2()
+	//closureDemo1()
+	//closureDemo2()
+	//closureDemo3()
+	closureDemo4()
 }
