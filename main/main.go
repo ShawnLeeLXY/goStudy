@@ -27,5 +27,6 @@ func main() {
 	//closureDemo4()
 	//deferDemo()
 	//errDemo()
-	methodDemo()
+	//methodDemo()
+	interfaceDemo()
 }

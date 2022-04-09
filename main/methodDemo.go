@@ -8,8 +8,6 @@ func methodDemo() {
 	methodTest2()
 	fmt.Println("----------")
 	methodTest3()
-	fmt.Println("----------")
-	methodTest4()
 }
 
 type Data struct {
