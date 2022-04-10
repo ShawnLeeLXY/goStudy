@@ -1,5 +1,7 @@
 package main
 
+import gct "goStudy/concurrent"
+
 func main() {
 	//hello()
 	//test1()
@@ -28,5 +30,6 @@ func main() {
 	//deferDemo()
 	//errDemo()
 	//methodDemo()
-	interfaceDemo()
+	//interfaceDemo()
+	gct.Proxy()
 }
