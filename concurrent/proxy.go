@@ -14,5 +14,6 @@ func Proxy() {
 	//goPoolDemo()
 	//selectDemo()
 	//mutexDemo()
-	RWMutexDemo()
+	//RWMutexDemo()
+	atomicDemo()
 }
