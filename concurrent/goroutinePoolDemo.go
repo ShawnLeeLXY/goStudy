@@ -3,19 +3,16 @@ package concurrent
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 type Job struct {
-	// id
-	Id int
-	// 需要计算的随机数
+	Id      int
 	RandNum int
 }
 
 type Result struct {
-	// 这里必须传对象实例
 	job *Job
-	// 求和
 	sum int
 }
 
@@ -29,17 +26,25 @@ func goPoolDemo() {
 	resCh := make(chan *Result, 128)
 	// 创建工作池
 	createPool(64, jobCh, resCh)
+	num := 1000
 	// 开个打印的协程
+	var end bool
 	go func(resCh chan *Result) {
+		var cnt int
 		// 遍历结果管道打印
 		for result := range resCh {
 			fmt.Printf("job id:%v randnum:%v result:%d\n", result.job.Id,
 				result.job.RandNum, result.sum)
+			cnt++
+			if cnt == num {
+				break
+			}
 		}
+		end = true
 	}(resCh)
 	var id int
 	// 循环创建job，输入到管道
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < num; i++ {
 		id++
 		// 生成随机数
 		rNum := rand.Int()
@@ -49,7 +54,9 @@ func goPoolDemo() {
 		}
 		jobCh <- job
 	}
-	close(jobCh)
+	for !end {
+		time.Sleep(time.Millisecond * 10)
+	}
 }
 
 // 创建工作池
@@ -79,7 +86,6 @@ func createPool(num int, jobCh chan *Job, resCh chan *Result) {
 				//运算结果扔到管道
 				resCh <- res
 			}
-			close(resCh)
 		}(jobCh, resCh)
 	}
 }

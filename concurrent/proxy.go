@@ -11,5 +11,8 @@ func Proxy() {
 	//chanDemo2()
 	//chanDemo3()
 	//chanDemo4()
-	goPoolDemo()
+	//goPoolDemo()
+	//selectDemo()
+	//mutexDemo()
+	RWMutexDemo()
 }
