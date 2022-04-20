@@ -1,6 +1,8 @@
 package main
 
-import gct "goStudy/concurrent"
+import (
+	"goStudy/rpc"
+)
 
 func main() {
 	//hello()
@@ -31,5 +33,6 @@ func main() {
 	//errDemo()
 	//methodDemo()
 	//interfaceDemo()
-	gct.Proxy()
+	//gct.Proxy()
+	rpc.Proxy()
 }
