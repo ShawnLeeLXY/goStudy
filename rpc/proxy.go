@@ -1,7 +1,8 @@
 package rpc
 
-import rec "goStudy/rpc/rectangle"
+import cal "goStudy/rpc/calculation"
 
 func Proxy() {
-	rec.RecDemo()
+	//rec.RecDemo()
+	cal.CalDemo()
 }
