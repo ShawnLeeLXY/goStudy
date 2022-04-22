@@ -1,6 +1,6 @@
 package calculation
 
 func CalDemo() {
-	server()
+	//server()
 	client()
 }
