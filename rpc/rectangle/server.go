@@ -35,7 +35,7 @@ func server() {
 	// 2. 服务处理绑定到http协议上
 	rpc.HandleHTTP()
 	// 3. 监听服务
-	err := http.ListenAndServe("127.0.0.1:8000", nil)
+	err := http.ListenAndServe(":8101", nil)
 	if err != nil {
 		log.Panicln(err)
 	}

@@ -2,6 +2,7 @@ package calculation
 
 import (
 	"errors"
+	"fmt"
 	"log"
 	"net"
 	"net/http"
@@ -33,11 +34,13 @@ func (a *Arith) Divide(req ArithReq, resp *ArithResp) error {
 }
 
 func server() {
+	// 注册一个Arith服务
 	rpc.Register(new(Arith))
 	rpc.HandleHTTP()
-	ln, err := net.Listen("tcp", ":8989")
+	fmt.Println("server正在监听...")
+	ln, err := net.Listen("tcp", ":8101")
 	if err != nil {
 		log.Fatal("Arith error:", err)
 	}
-	go http.Serve(ln, nil)
+	http.Serve(ln, nil)
 }

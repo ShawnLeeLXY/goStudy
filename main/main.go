@@ -1,7 +1,7 @@
 package main
 
 import (
-	"goStudy/netpack"
+	"goStudy/rpc"
 )
 
 func main() {
@@ -34,6 +34,6 @@ func main() {
 	//methodDemo()
 	//interfaceDemo()
 	//gct.Proxy()
-	//rpc.Proxy()
-	netpack.Proxy()
+	rpc.Proxy()
+	//netpack.Proxy()
 }

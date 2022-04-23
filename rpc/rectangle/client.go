@@ -9,7 +9,7 @@ import (
 // Client 客户端主函数
 func client() {
 	// 1. 连接远程rpc服务
-	conn, err := rpc.DialHTTP("tcp", "127.0.0.1:8000")
+	conn, err := rpc.DialHTTP("tcp", "127.0.0.1:8101")
 	if err != nil {
 		log.Fatal(err)
 	}

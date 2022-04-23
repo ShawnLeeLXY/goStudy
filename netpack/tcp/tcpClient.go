@@ -10,7 +10,7 @@ import (
 )
 
 func TcpClient() {
-	conn, err := net.Dial("tcp", "0.0.0.0:8101")
+	conn, err := net.Dial("tcp", "175.178.19.110:8101")
 	if err != nil {
 		log.Fatal("err:", err)
 	}

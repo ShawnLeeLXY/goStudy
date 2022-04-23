@@ -8,7 +8,7 @@ import (
 )
 
 func tcpServer() {
-	ln, err := net.Listen("tcp", "127.0.0.1:8101")
+	ln, err := net.Listen("tcp", ":8101")
 	if err != nil {
 		log.Fatal("Listen failed, err:", err)
 	}
@@ -29,7 +29,8 @@ func process(conn net.Conn) {
 		var buf [256]byte
 		n, err := reader.Read(buf[:]) // 读取数据
 		if err != nil {
-			log.Fatal("Read from client failed, err:", err)
+			log.Println("Read from client failed, err:", err)
+			break
 		}
 		recv := string(buf[:n])
 		fmt.Println("server收到了client发来的数据：", recv)
