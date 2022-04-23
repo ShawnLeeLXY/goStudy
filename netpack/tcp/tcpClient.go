@@ -1,4 +1,4 @@
-package netpack
+package tcp
 
 import (
 	"bufio"
@@ -9,8 +9,8 @@ import (
 	"strings"
 )
 
-func tcpClient() {
-	conn, err := net.Dial("tcp", "127.0.0.1:8101")
+func TcpClient() {
+	conn, err := net.Dial("tcp", "0.0.0.0:8101")
 	if err != nil {
 		log.Fatal("err:", err)
 	}
@@ -33,7 +33,7 @@ func tcpClient() {
 		buf := [256]byte{}
 		n, err := conn.Read(buf[:])
 		if err != nil {
-			log.Fatal("recv failed, err:", err)
+			log.Fatal("Recv failed, err:", err)
 		}
 		fmt.Println("client收到了server发来的数据：", string(buf[:n]))
 	}
