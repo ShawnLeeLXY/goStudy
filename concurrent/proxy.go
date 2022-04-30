@@ -15,5 +15,5 @@ func Proxy() {
 	//selectDemo()
 	//mutexDemo()
 	//RWMutexDemo()
-	atomicDemo()
+	//atomicDemo()
 }
